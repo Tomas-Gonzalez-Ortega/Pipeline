@@ -1,0 +1,17 @@
+[(abstract) Filter|-Filter next;|+Filter(); +final void filter(String); #abstract String doFilter(String);+Filter add(Filter)],
+[(abstract) Filter]++0..1-0..1>[(abstract) Filter],
+
+[PrintStreamSink|-final PrintStream sink;|+PrintStreamSink(PrintStream); #String doFilter(String)],
+[(abstract) Filter]^[PrintStreamSink],
+
+[UpperCapsFilter||+UpperCapsFilter(); #String doFilter(String)],
+[(abstract) Filter]^[UpperCapsFilter],
+[LowerCapsFilter||+LowerCapsFilter(); #String doFilter(String)],
+[(abstract) Filter]^[LowerCapsFilter],
+[CamelCapsFilter||+CamelCapsFilter(); #String doFilter(String)],
+[(abstract) Filter]^[CamelCapsFilter],
+[ReverseCapsFilter||+ReverseCapsFilter(); #String doFilter(String)],
+[(abstract) Filter]^[ReverseCapsFilter],
+
+[TrimFilter||+TrimFilter(); #String doFilter(String)],
+[(abstract) Filter]^[TrimFilter],
